@@ -1,5 +1,13 @@
 import { useEffect, useState } from "react";
 import Pokemon from "./Pokemon";
+import styled from "styled-components";
+
+const PokemonListStyle = styled.div`
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 5px;
+  margin-top: 5px;
+`;
 
 const PokemonList = ({ selected, setSelected }) => {
   const [pokeListState, setPokeListState] = useState([]);
@@ -13,7 +21,7 @@ const PokemonList = ({ selected, setSelected }) => {
   }, []);
 
   return (
-    <div className="pokemon-list">
+    <PokemonListStyle>
       {pokeListState.map((pokemon) => (
         <Pokemon
           pokemonName={pokemon.name}
@@ -21,7 +29,7 @@ const PokemonList = ({ selected, setSelected }) => {
           setSelected={setSelected}
         />
       ))}
-    </div>
+    </PokemonListStyle>
   );
 };
 
