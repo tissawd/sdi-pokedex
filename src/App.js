@@ -24,7 +24,7 @@ function App() {
           <h1>Created by Nick and Derek</h1>
         </Route>
         <Route path="/details">
-          <PokemonDetails selectedPokemon={selectedPokemon}/>
+          <PokemonDetails selectedPokemon={selectedPokemon} />
         </Route>
       </main>
     </div>
