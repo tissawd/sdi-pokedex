@@ -28,3 +28,17 @@
 .pokemon {
   border: solid;
 }
+
+.stats{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  border: solid black;
+  background-color: grey;
+}
+
+.abilities{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
