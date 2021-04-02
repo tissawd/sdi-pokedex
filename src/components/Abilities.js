@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const AbilitiesStyle = styled.h3`
-  color: firebrick;
+  color: ${props => props.type.type.name === 'fire' ? 'firebrick' : 'black'};
 `;
 
 const Abilities = ({ pokemonInfo }) => {
@@ -33,7 +33,7 @@ const Abilities = ({ pokemonInfo }) => {
       <section className="abilities">
         {Array.isArray(pokemonInfo.abilities) ? (
           <ul>
-            <AbilitiesStyle>Abilities</AbilitiesStyle>
+            <AbilitiesStyle type={pokemonInfo.types[0]}>Abilities</AbilitiesStyle>
             {pokemonInfo.abilities.map((ability) => {
               return <li>{ability.ability.name}</li>;
             })}
