@@ -23,7 +23,7 @@ function App() {
         <Route exact path="/about">
           <h1>Created by Nick and Derek</h1>
         </Route>
-        <Route path="/details">
+        <Route path="/details/:slug">
           <PokemonDetails selectedPokemon={selectedPokemon} />
         </Route>
       </main>

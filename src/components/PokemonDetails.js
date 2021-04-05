@@ -1,5 +1,6 @@
 import Pokemon from "./Pokemon";
 import { useEffect, useState } from "react";
+import { useParams } from 'react-router-dom';
 import Abilities from "./Abilities";
 
 const PokemonDetails = ({ selectedPokemon }) => {
@@ -10,6 +11,8 @@ const PokemonDetails = ({ selectedPokemon }) => {
       .then((results) => setPokemonInfo(results));
   }, []);
 
+  let { slug } = useParams();
+  console.log(slug);
   return (
     <div>
       <Pokemon pokemonName={selectedPokemon} />
