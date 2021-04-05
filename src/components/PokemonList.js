@@ -7,6 +7,7 @@ const PokemonListStyle = styled.div`
   grid-template-columns: repeat(5, 1fr);
   gap: 5px;
   margin-top: 5px;
+  padding: 5px;
 `;
 
 const PokemonList = ({ selected, setSelected }) => {
