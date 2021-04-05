@@ -8,7 +8,7 @@ const PokemonDetails = ({ selectedPokemon }) => {
     fetch(`https://pokeapi.co/api/v2/pokemon/${selectedPokemon}`)
       .then((response) => response.json())
       .then((results) => setPokemonInfo(results));
-  });
+  }, []);
 
   return (
     <div>
